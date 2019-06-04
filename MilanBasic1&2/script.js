@@ -8,23 +8,23 @@ $(document).ready(function() {
      if(img=="Santa Claus"){
 
      	$(this).parent().slideUp();
-     	$ ("#newMsg1").text("You click on the "+img);
-     	$ ("#newMsg").text("Click again if you want");
+     	$ ("#newMsg1").text("Click again on the image or reload page"+img);
+     	$ ("#newMsg").text("You shot Santa Claus!");
     } 
 
     else if(img=="Bell"){
 
      	
      $(this).parent().slideUp();	
-     $ ("#newMsg1").text("You click on the "+img);
-     $ ("#newMsg").text("Click again if you want");
+     $ ("#newMsg1").text("Click again on the image or reload page"+img);
+     $ ("#newMsg").text("You lost the bell");
 	}
  	
  	else{
 
  	$(this).parent().slideUp();
-     $ ("#newMsg1").text("You click on the "+img);
-     $ ("#newMsg").text("Click again if you want");
+     $ ("#newMsg1").text("Click again on the image or reload page"+img);
+     $ ("#newMsg").text("Opss, there is no gift box for you!");
 	 }
 
  }});

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+
+<!-- Start of header -->
+	<header id="header">
+		<div class="header1">
+			<img src="img/shop1.png" alt="Shop Logo" width="100"> 
+		</div>
+		<div id="headerpic"> 
+			<h2>Chocolate makes happy ;)</h2>
+		</div>
+		
+	</header>
+
+<!-- /header -->
+
+<!-- Start of Navigation bar -->
+	<nav>
+		<ul>
+			<li><a href="index.html" title="Home">Home</a></li>
+			<li><a href="about.html" title="About us">About us</a></li>
+			<li><a href="cart.html" title="Cart">Shopping cart</a></li>
+			<li><a href="video.html" title="Contact">Contact</a></li>
+		</ul>
+	</nav>
+	<!-- /Navigation bar -->
+<!-- Main part-->
+	
+<button class="cart-btn" onclick="document.getElementById('cart').style.display='block'">View cart</button>
+
+<div id="cart" class="cart-container" style="display:none">
+  <span onclick="this.parentElement.style.display='none'"
+  class="cart-container">X</span>
+  <p>Click on the X to close this panel.</p>
+  
+</div>
+
+
+
+
+<!-- Javascript-->
+<script>
+	
+	var products=[{
+		"Product":"Cookie",
+		"ID":1,
+		"Descrpition":"Delicious chocolate cookie from local bakery",
+		"Price":"2 Euro",
+		"Image":"img/cookie.jpg"
+		},
+		{
+		"Product":"Sweet Creme",
+		"ID": 2,
+		"Descrpition":"Rasperry, chocolate and mascarpone creme in a fabulous composition",
+		"Price":"1 Euro",
+		"Image":"img/creme.jpg"
+		},
+		{
+		"Product":"Chocolate Heart",
+		"ID":3,
+		"Descrpition":"Made with love",
+		"Price":"3 Euro",
+		"Image":"img/heart.jpg"
+		},
+		{
+		"Product":"Hot Chocolate",
+		"ID":4,
+		"Descrpition":"Marshmallows in melted perfection",
+		"Price":"4 Euro",
+		"Image":"img/hotchocolate.jpg"
+		},
+		{
+		"Product":"Ice Cream",
+		"ID":5,
+		"Descrpition":"Cold as ice for hot people",
+		"Price":"5 Euro",
+		"Image":"img/ice-cream.jpg"
+		},
+		{
+		"Product":"Pralines",
+		"ID":6,
+		"Descrpition":"Small but tasty",
+		"Price":"6 Euro",
+		"Image":"img/pralines.jpg"
+		}
+		];
+
+		var i = 0;
+    		document.writeln("<table border='0'>");
+    		for (i = 0; i < products.length; i++) 
+    		{
+    		document.write(`
+    						<div class="grid-container">
+    							<div class="item1">
+    								<img src="${products[i].Image}" alt="Pictures" height=60px width=85px>
+    							</div>
+    							<div class="item2">
+    								${products[i].Product}		
+    							</div>
+    							<div class="item3">
+    								${products[i].Descrpition}
+    							</div>
+    							<div class="item4">
+    								${products[i].Price}
+    							</div>
+    							<div>
+    								<input type="number" value="1" min="0" max="99" class="qtyinput">
+    							</div>
+    							<button type="button">Add to cart
+    							</button>
+    						</div>
+					`);
+    		}
+
+</script>
+
+
+<!-- Footer-->
+
+	<footer> 
+		<div class="navfooter">
+			<ul>
+				<li><a href="index.html" title="Home">Home</a></li>
+				<li><a href="about.html" title="About us">About us</a></li>
+				<li><a href="cart.html" title="Cart">Shopping cart</a></li>
+				<li><a href="video.html" title="Contact">Contact</a></li>
+			</ul>			
+		</div>
+		<div class="logofooter">
+			<img src="img/shop1.png" alt="Shop Logo" height="50">
+		</div>
+		<div class="copyfooter">
+			<p> Ricarda - CodeFactory 2019 </p>
+		</div>
+	</footer>
+
+</body>
+</html>

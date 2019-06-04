@@ -1,0 +1,120 @@
+/* Background Colors */
+$prim-color: #909090;
+$sec-color: #131313;
+$ter-color: #DEDEDE;
+$quart-color: #f9edb9;
+
+/* Font Colors */
+$font-col1: #ffffff;
+$font-col2: #DCDCDC;
+$font-col3: #EEEEEE;
+$font-col4: #000000;
+$font-col5: #676767;
+
+/* Font Style */
+$font1: 'Roboto Condensed', sans-serif;
+
+/* Laptop and PC*/
+// @media only screen and (min-width:1024px) {
+//  {
+// 	display:none;
+// }
+
+header {
+	background-color: $prim-color;
+	height: 100px;
+	padding: 1em; 
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.headerpic{
+	display: flex;
+	justify-content: center;
+}
+
+
+body {
+	background-color: white;
+}
+
+a {
+	color: $font-col3; /* color of hyperlinks */	
+	text-decoration: none; /* remove underlines*/
+}
+
+nav, .navfooter {
+		background-color: $sec-color;
+		font-family: $font1;
+		font-size: 1em;
+		font-weight: bold;
+		color: white;
+		letter-spacing: 1px;
+		height: 50px;
+		margin-top: 0px;
+		display: flex;
+	  	align-items: left;
+	  	justify-content: left;
+	}
+
+nav li, footer li {
+	display: inline; /* show list next to eachother */
+    list-style-type: none; /* no bulletpoints */
+	padding: 0em; /* space between list elements */
+
+}
+
+ul { 
+	padding-left: 0.6em; 
+}
+
+
+footer {
+	background-color: $prim-color;
+	font-size: 0.8em;
+	font-family: $font1;
+	color: $font-col3;
+}
+
+.logofooter{
+	text-align: right;
+	margin: 1.5em;
+}
+
+.copyfooter{
+	text-align: center;
+	padding-bottom: 1em;
+
+}
+
+.grid-container{
+	display: grid;
+	justify-content: left;
+	grid-template-columns: 10% 20% 45% 8% 7% 7%;
+  	grid-gap: 5px;
+  	grid-row-gap: 5px;
+  	background-color: $ter-color;
+	padding: 10px;
+  	align-text: left;
+}
+
+.grid-container > div {
+  background-color: $quart-color;
+  text-align: left;
+  padding: 10px 0;
+  padding-left:10px;
+  font-size: 1.5em;
+  font-family: $font1;
+}
+
+button {
+	background-color: $prim-color;
+	color:$font-col1;
+	font-size: 1em;
+}
+
+#cart, .cart-btn {
+	font-size: 1em;
+	font-family: $font1;
+}
